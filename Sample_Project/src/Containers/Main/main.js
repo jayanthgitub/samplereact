@@ -10,6 +10,8 @@ class Main extends React.Component {
 	        const persons = res.data;
 	        this.setState({ persons });
 	      })
+	      .catch(e =>{
+	      })
     }
     render(){
 		return (
@@ -33,7 +35,7 @@ class Main extends React.Component {
 							<tbody>
 								{this.state.persons.map(element => {
 									return (
-											<tr className="row100 body" key={element.name}>
+											<tr className="rowcontent" key={element.name}>
 												<td className="column1">{element.name}</td>
 												<td className="column2">{element.city}</td>
 												<td className="column3">{element.age}</td>
